@@ -224,10 +224,19 @@ avatar */
   justify-content: center;
 }
 
+/* lots of mui style hacking */
 .css-i44wyl {
   width: 100%;
 
   margin: 0;
+}
+.MuiTextField-root {
+  width: 100%;
+  margin: 0;
+}
+
+.MuiFormControl-root {
+  width: 100%;
 }
 
 .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
