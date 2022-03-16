@@ -82,7 +82,7 @@ const Wrapper = styled.section`
   .job-form {
     background: var(--white);
     display: grid;
-    row-gap: 1rem;
+    row-gap: 2rem;
     column-gap: 0.5rem;
     align-items: center;
     margin-bottom: 3rem;
@@ -100,12 +100,17 @@ const Wrapper = styled.section`
     }
     .btn {
       padding: 0.75rem;
+      color: white;
     }
     @media (min-width: 776px) {
-      grid-template-columns: 1fr 1fr auto;
+      grid-template-columns: 1fr 200px auto;
       .btn {
         height: 100%;
-        padding: 0 2rem;
+        width: 100%;
+        align-self: center;
+        justify-self: left;
+        grid-column: 3/3;
+        color: white;
       }
       column-gap: 2rem;
     }

@@ -10,9 +10,7 @@ function Home() {
     <>
       {user && <Redirect to="/dashboard" />}
       <Wrapper>
-        <nav>
-          <img alt="jobs app" />
-        </nav>
+        <nav></nav>
         <div className="container page">
           <div className="info">
             <h1>job tracking app</h1>
@@ -27,7 +25,11 @@ function Home() {
               Login / Register
             </Link>
           </div>
-          <img alt="job hunt" className="img main-img" />
+          <img
+            alt="job hunt"
+            className="img main-img"
+            src="./images/tuesdaylogo.png"
+          />
         </div>
       </Wrapper>
     </>
@@ -62,6 +64,7 @@ const Wrapper = styled.div`
     }
     .main-img {
       display: block;
+      width: auto;
     }
   }
 `;

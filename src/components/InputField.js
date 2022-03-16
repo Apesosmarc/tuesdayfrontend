@@ -5,14 +5,7 @@ import TextField from "@mui/material/TextField";
 export default function BasicTextFields({ handleChange, input }) {
   console.log(input);
   return (
-    <Box
-      sx={{
-        "& > :not(style)": { m: 1, width: "25ch" },
-      }}
-      noValidate
-      autoComplete="off"
-      onChange={handleChange}
-    >
+    <Box noValidate autoComplete="off" onChange={handleChange}>
       <TextField
         id="outlined-basic"
         name="title"

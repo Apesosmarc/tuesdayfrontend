@@ -10,9 +10,9 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/dashboard" exact>
+        <PrivateRoute path="/dashboard" exact>
           <Dashboard />
-        </Route>
+        </PrivateRoute>
         <Route path="/register">
           <Register />
         </Route>

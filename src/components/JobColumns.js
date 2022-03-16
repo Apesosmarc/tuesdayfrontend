@@ -22,7 +22,7 @@ const Wrapper = styled.section`
     border-top-left-radius: var(--borderRadius);
     border-top-right-radius: var(--borderRadius);
     display: grid;
-    grid-template-columns: 1fr 1fr 150px 100px 100px;
+    grid-template-columns: 1fr 150px 200px 200px 100px;
     align-items: center;
     padding: 1rem 1.5rem;
     column-gap: 1rem;

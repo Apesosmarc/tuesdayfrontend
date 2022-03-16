@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <Wrapper>
       <div className="nav-center">
-        <img src={userAvatar} alt="jobs app" height="100px" />
+        <img src="./images/tuesdaylogo.png" alt="jobs app" height="100px" />
         {user && (
           <div className="btn-container">
             <button className="btn" onClick={() => setShowLogout(!showLogout)}>
@@ -62,12 +62,12 @@ const Wrapper = styled.nav`
     gap: 0 0.5rem;
     position: relative;
     width: 200px;
-    height: 100px;
+    height: 60px;
   }
 
   .dropdown {
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 0;
     width: 100%;
     background: var(--white);

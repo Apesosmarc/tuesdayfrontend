@@ -33,7 +33,7 @@ function stringAvatar(name) {
 
 export default function BackgroundLetterAvatars({ name }) {
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack class="avatar" direction="row" spacing={1}>
       <Avatar {...stringAvatar(name)} />
     </Stack>
   );

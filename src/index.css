@@ -12,16 +12,7 @@ html {
 
 :root {
   /* colors */
-  --primary-100: #e2e0ff;
-  --primary-200: #c1beff;
-  --primary-300: #a29dff;
-  --primary-400: #837dff;
-  --primary-500: #645cff;
-  --primary-600: #504acc;
-  --primary-700: #3c3799;
-  --primary-800: #282566;
-  --primary-900: #141233;
-
+  --primary: #73d28f;
   /* grey */
   --grey-50: #f8fafc;
   --grey-100: #f1f5f9;
@@ -137,8 +128,8 @@ ul {
 .btn {
   cursor: pointer;
   color: var(--grey-800);
-  /* background: var(--primary-500); */
-  background: var(--backgroundColor);
+  background: var(--primary);
+  color: white;
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -148,18 +139,12 @@ ul {
   text-transform: capitalize;
   display: inline-block;
 }
-.btn:hover {
-  background: var(--primary-700);
-  box-shadow: var(--shadow-3);
-}
+
 .btn-hipster {
   color: var(--primary-500);
   background: var(--primary-200);
 }
-.btn-hipster:hover {
-  color: var(--primary-200);
-  background: var(--primary-700);
-}
+
 .btn-block {
   width: 100%;
 }
@@ -231,11 +216,36 @@ ul {
   letter-spacing: var(--letterSpacing);
   text-transform: capitalize;
 }
+/* 
+avatar */
+
+.css-w4z10b-MuiStack-root {
+  display: flex;
+  justify-content: center;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 100%;
+
+  margin: 0;
+}
+
+.css-xn6ruc > :not(style) {
+  width: 100%;
+  margin: 0;
+}
 /* alert */
 
 @keyframes spinner {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 992px) {
+  .css-w4z10b-MuiStack-root {
+    display: flex;
+    justify-content: initial;
   }
 }
 

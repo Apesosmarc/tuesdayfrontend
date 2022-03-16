@@ -55,7 +55,9 @@ const Jobs = () => {
               <span className="icon"></span>
               <span className="position">{title}</span>
               <span className="date">
-                <BackgroundAvatar name={name} /> {name}
+                <BackgroundAvatar name={name} />
+
+                {userJob(name) ? "(You)" : name}
               </span>
               {userJob(name) ? (
                 <DropdownPrio priority={priority} id={id} />
@@ -102,24 +104,12 @@ const Container = styled.section`
     border-radius: var(--borderRadius);
     margin-bottom: 2rem;
     display: grid;
+    align-items: center;
     padding: 2rem 0;
     justify-content: center;
     text-align: center;
   }
-  .icon {
-    background: var(--primary-500);
-    display: block;
-    border-radius: var(--borderRadius);
-    color: var(--white);
-    font-size: 2rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-  }
+
   span {
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
@@ -187,7 +177,7 @@ const Container = styled.section`
       justify-content: left;
       text-align: left;
       border-bottom: 1px solid var(--grey-200);
-      grid-template-columns: 1fr 1fr 150px 100px 100px;
+      grid-template-columns: 1fr 150px 200px 200px 100px;
       align-items: center;
       padding: 1rem 1.5rem;
       column-gap: 1rem;
@@ -211,9 +201,21 @@ const Container = styled.section`
 
     .status {
       font-size: var(--smallText);
+      height: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
     }
     .priority {
       font-size: var(--smallText);
+      height: 30px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
     }
 
     .action-div {
@@ -256,6 +258,7 @@ const StatusContainer = styled.span`
   letter-spacing: var(--letterSpacing);
   text-align: center;
   color: white;
+
   background: ${(props) => setStatusBackground(props.children)};
 `;
 export default Jobs;
