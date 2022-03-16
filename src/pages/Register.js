@@ -40,8 +40,6 @@ function Register() {
     }
   };
 
-  console.log(user);
-
   return (
     <>
       {user && <Redirect to="./dashboard" />}
