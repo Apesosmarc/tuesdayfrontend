@@ -5,10 +5,7 @@ import { useGlobalContext } from "../context/appContext";
 import BackgroundAvatar from "./BackgroundAvatar";
 
 const Navbar = () => {
-  const { user, logout, userAvatar, getRandomAvatar } = useGlobalContext();
-  useEffect(() => {
-    getRandomAvatar();
-  }, []);
+  const { user, logout } = useGlobalContext();
 
   const [showLogout, setShowLogout] = useState(false);
   return (
@@ -18,11 +15,6 @@ const Navbar = () => {
         {user && (
           <div className="btn-container">
             <button className="btn" onClick={() => setShowLogout(!showLogout)}>
-              {/* <img
-                height="75%"
-                src={userAvatar}
-                alt={`user ${user}'s avatar image`}
-              /> */}
               <BackgroundAvatar name={user} />
               {user}
               <FaCaretDown />

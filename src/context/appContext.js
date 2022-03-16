@@ -14,7 +14,6 @@ import {
   EDIT_JOB_SUCCESS,
   CREATE_JOB_ERROR,
   CREATE_JOB_SUCCESS,
-  GET_RANDOM_AVATAR,
   DELETE_JOB_ERROR,
 } from "./actions";
 import reducer from "./reducer";
@@ -46,13 +45,6 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       dispatch({ type: DELETE_JOB_ERROR });
     }
-  };
-
-  const getRandomAvatar = () => {
-    const random = Math.floor(Math.random() * (51 - 0));
-    const dir = `/images/png/img-${random}`;
-
-    dispatch({ type: "GET_RANDOM_AVATAR", payload: dir });
   };
 
   const createJob = async (userInput) => {
@@ -159,7 +151,7 @@ const AppProvider = ({ children }) => {
         fetchJobs,
         editJob,
         createJob,
-        getRandomAvatar,
+
         deleteJob,
       }}
     >
